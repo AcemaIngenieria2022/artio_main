@@ -1,7 +1,7 @@
 :root {
-  --siwa-background: #ffffff;
-  --siwa-foreground: #18252c; /* Antracita/Petróleo oscuro del logo */
-  --siwa-orange: #f05023;     /* Naranja/Coral vibrante */
+  --artio-bg: #fcfbf9;
+  --artio-dark: #2c1e14;   /* Café oscuro ebanistería */
+  --artio-wood: #8b5a2b;   /* Tono madera warm */
 }
 
 html {
@@ -13,14 +13,15 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--siwa-background);
+  background-color: var(--artio-bg);
 }
 
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--siwa-foreground);
+  color: var(--artio-dark);
+  font-family: var(--font-montserrat), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

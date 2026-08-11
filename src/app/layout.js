@@ -3,14 +3,14 @@ import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-montserrat",
   display: "swap",
 });
 
 export const metadata = {
-  title: "Siwa Suministros",
-  description: "Sitio en construcción - Holding",
+  title: "Artio - Ebanistería",
+  description: "Sitio en construcción - Artio Ebanistería",
   icons: {
     icon: "/favicon.ico", 
     apple: "/favicon.ico",
@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={montserrat.variable}>
-      <body style={{ backgroundColor: '#ffffff', margin: 0 }}>
+      <body style={{ backgroundColor: '#fcfbf9', margin: 0 }}>
         {children}
       </body>
     </html>
