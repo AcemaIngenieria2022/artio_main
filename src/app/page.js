@@ -10,33 +10,29 @@ export default function Home() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#fcfbf9',
+      backgroundColor: '#120d0a', // Fondo café ultra oscuro sobrio
       padding: '24px',
       position: 'relative',
       overflow: 'hidden'
     }}>
       
-      {/* Luz cálida ambiental de fondo */}
+      {/* Resplandor cálido central estilo madera/dorado */}
       <div style={{
-        position: 'absolute', top: '-10%', left: '-10%', width: '50vw', height: '50vw',
-        background: 'radial-gradient(circle, rgba(180, 130, 90, 0.15) 0%, transparent 65%)',
-        filter: 'blur(90px)', pointerEvents: 'none'
+        position: 'absolute', top: '50%', left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '600px', height: '600px',
+        background: 'radial-gradient(circle, rgba(180, 115, 60, 0.12) 0%, transparent 70%)',
+        filter: 'blur(80px)', pointerEvents: 'none'
       }} />
 
-      <div style={{
-        position: 'absolute', bottom: '-10%', right: '-10%', width: '50vw', height: '50vw',
-        background: 'radial-gradient(circle, rgba(120, 80, 50, 0.12) 0%, transparent 65%)',
-        filter: 'blur(90px)', pointerEvents: 'none'
-      }} />
-
-      {/* Trama geométrica minimalista */}
+      {/* Trama sutil de fondo */}
       <div style={{
         position: 'absolute', inset: 0,
         backgroundImage: `
-          linear-gradient(rgba(44, 30, 20, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(44, 30, 20, 0.03) 1px, transparent 1px)
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)
         `,
-        backgroundSize: '40px 40px',
+        backgroundSize: '48px 48px',
         pointerEvents: 'none'
       }} />
 
@@ -45,87 +41,83 @@ export default function Home() {
         position: 'relative',
         zIndex: 10,
         width: '100%',
-        maxWidth: '540px',
-        background: 'rgba(255, 255, 255, 0.88)',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
-        borderRadius: '28px',
-        padding: '52px 40px 45px 40px',
+        maxWidth: '520px',
+        backgroundColor: 'rgba(24, 18, 14, 0.85)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        borderRadius: '24px',
+        padding: '56px 40px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center',
-        border: '1px solid rgba(255, 255, 255, 0.9)',
-        boxShadow: `
-          0 20px 50px -15px rgba(44, 30, 20, 0.08),
-          0 0 30px -5px rgba(180, 130, 90, 0.15)
-        `
+        border: '1px solid rgba(210, 150, 90, 0.2)',
+        boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.65)'
       }}>
 
-        {/* Borde superior decorativo */}
+        {/* Detalle dorado superior impecable */}
         <div style={{
-          position: 'absolute', top: 0, left: '10%', right: '10%', height: '3px',
-          background: 'linear-gradient(90deg, transparent, #8B5A2B, #2C1E14, transparent)',
+          position: 'absolute', top: 0, left: '20%', right: '20%', height: '2px',
+          background: 'linear-gradient(90deg, transparent, #c48b4e, transparent)',
           borderRadius: '99px'
         }} />
 
-        {/* Detalle lateral */}
+        {/* Contenedor del Logo con tarjeta blanca limpia para que el logo resalte */}
         <div style={{
-          position: 'absolute', left: 0, top: '20%', bottom: '20%', width: '4px',
-          background: 'linear-gradient(180deg, #8B5A2B 0%, #2C1E14 100%)',
-          borderRadius: '0 4px 4px 0'
-        }} />
-
-        {/* Logo Artio Ebanistería */}
-        <div style={{
-          marginBottom: '28px',
+          marginBottom: '32px',
           width: '100%',
-          maxWidth: '320px',
+          maxWidth: '340px',
+          backgroundColor: '#ffffff',
+          padding: '24px 20px',
+          borderRadius: '16px',
+          boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
           display: 'flex',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          alignItems: 'center'
         }}>
           <Image 
             src="/imagenes/artio-logo.webp"
             alt="Artio Ebanistería"
-            width={320}
-            height={160}
+            width={300}
+            height={150}
             priority
             unoptimized
             style={{ 
               objectFit: 'contain',
-              filter: 'drop-shadow(0px 6px 12px rgba(44, 30, 20, 0.06))'
+              width: '100%',
+              height: 'auto'
             }}
           />
         </div>
 
-        {/* Separador */}
+        {/* Separador elegante */}
         <div style={{
-          width: '60px',
-          height: '3px',
+          width: '40px',
+          height: '2px',
           borderRadius: '99px',
-          background: 'linear-gradient(90deg, #8B5A2B, #2C1E14)',
-          marginBottom: '32px'
+          background: '#c48b4e',
+          marginBottom: '28px',
+          opacity: 0.8
         }} />
 
-        {/* Bloque Tipográfico */}
+        {/* Textos */}
         <h1 style={{
-          fontSize: 'clamp(32px, 7vw, 46px)', 
-          color: '#2C1E14', 
-          fontWeight: '800', 
+          fontSize: 'clamp(28px, 6vw, 38px)', 
+          color: '#ffffff', 
+          fontWeight: '700', 
           margin: '0', 
-          letterSpacing: '-0.5px',
-          lineHeight: '1.1'
+          letterSpacing: '-0.5px'
         }}>
           ¡Bienvenido!
         </h1>
         
         <p style={{
-          fontSize: 'clamp(12px, 3vw, 13px)', 
-          color: '#8B5A2B', 
+          fontSize: '12px', 
+          color: '#c48b4e', 
           marginTop: '12px', 
-          letterSpacing: '5px', 
+          letterSpacing: '4px', 
           textTransform: 'uppercase', 
-          fontWeight: '700'
+          fontWeight: '600'
         }}>
           Sitio en construcción
         </p>
